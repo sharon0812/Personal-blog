@@ -9,4 +9,4 @@ class UserTest(unittest.TestCase):
        with self.assertTrue(AttributeError):
            self.new_user.pass_secure
    def test_password_verification(self):
-       self.assertTrue(self.new_user.verify_password('mercy'))
+       self.assertTrue(self.new_user.verify_password('sharon'))
