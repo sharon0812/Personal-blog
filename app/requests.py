@@ -1,4 +1,4 @@
-import requests, json
+import requests
 
 # from .models import Quote
 base_url = None
