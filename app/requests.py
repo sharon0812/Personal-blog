@@ -1,7 +1,7 @@
 import requests
 
 # from .models import Quote
-base_url = None
+# base_url = None
 
 
 
