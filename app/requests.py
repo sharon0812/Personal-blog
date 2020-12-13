@@ -5,9 +5,11 @@ base_url = None
 
 
 
-def configure_request(app):
+def configure_requests(app):
     global base_url
     base_url = app.config['QUOTE_API_BASE_URL']
+
+    # return requests.get(url).json()
     
 def get_quotes():
     '''
