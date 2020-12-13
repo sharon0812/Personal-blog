@@ -13,7 +13,7 @@ login_manager.login_view = 'auth.login'
 
 # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# bootstrap = Bootstrap()
+bootstrap = Bootstrap()
 db = SQLAlchemy()
 photos = UploadSet('photos',IMAGES)
 mail = Mail()
