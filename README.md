@@ -26,12 +26,11 @@ The application shows the date when the post was posted and also when the commen
 ## How to access it
 * Clone the Repository
 
-  $ Open Terminal (Ctrl Alt T)
+  $ Open Terminal ( Ctrl Alt T)
   $ git clone link
   $ cd directory-name(Blog)
   $ code .
-
-
+  
 ## Support and contacts
  anyangosharon26@gmail.com
 
