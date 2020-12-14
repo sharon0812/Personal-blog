@@ -2,40 +2,32 @@ import os
 
 class Config:
 
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blog'
-    UPLOADED_PHOTOS_DEST ='app/static/photos'  
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     QUOTE_API_BASE_URL ='http://quotes.stormconsultancy.co.uk/random.json'
-    
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blog2'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    UPLOADED_PHOTOS_DEST ='app/static/photos'
+
     #  email configurations
-    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-    
+
     # simple mde  configurations
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
 
-class ProdConfig(Config): 
+class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    pass
 
-class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blog_test1'
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blog'
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blog2'
     DEBUG = True
 
+    
 config_options = {
 'development':DevConfig,
 'production':ProdConfig,
-'test':TestConfig
 }
